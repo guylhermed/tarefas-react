@@ -59,7 +59,7 @@ const App = () => {
 			<div className="container">
 				<Header />
 				<Route
-					path="/"
+					path="/tarefas-react"
 					exact
 					render={() => (
 						<>
