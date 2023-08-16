@@ -12,8 +12,10 @@ const AddTask = ({ handleTaskAddition }) => {
 	};
 
 	const handleAddTaskClick = () => {
+		if (inputData.trim() !== "") {
 		handleTaskAddition(inputData);
 		setInputData("");
+		}
 	};
 
 	return (
@@ -26,7 +28,7 @@ const AddTask = ({ handleTaskAddition }) => {
 			/>
 			
 			<div className="add-task-button-container">
-				<Button onClick={handleAddTaskClick}>Adicionar</Button>
+				<Button onClick={handleAddTaskClick} disabled={inputData.trim() === ""}>Adicionar</Button>
 			</div>
 		</div>
 	);
