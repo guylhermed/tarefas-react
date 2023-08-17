@@ -8,7 +8,7 @@ const Task = ({ task, handleTaskClick, handleTaskDeletion }) => {
   const history = useHistory();
 
   const handleTaskDetailsClick = () => {
-    localStorage.setItem(`taskTitle_${task.id}`, task.title); // Armazenando o título da tarefa
+    localStorage.setItem(`taskTitle_${task.id}`, task.title);
     history.push(`/tarefas-react/${task.id}`);
   };
 

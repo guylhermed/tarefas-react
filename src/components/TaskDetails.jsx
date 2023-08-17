@@ -41,7 +41,7 @@ const TaskDetails = () => {
         <Button onClick={handleBackButtonClick}>Voltar</Button>
       </div>
       <div className="task-details-container">
-        <h2>{taskTitle}</h2> {/* Exibindo o título da tarefa */}
+        <h2>{taskTitle}</h2>
         {isEditing ? (
           <input
             className="observations-input"

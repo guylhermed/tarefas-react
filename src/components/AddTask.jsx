@@ -5,33 +5,35 @@ import Button from "./Button";
 import "./AddTask.css";
 
 const AddTask = ({ handleTaskAddition }) => {
-	const [inputData, setInputData] = useState("");
+  const [inputData, setInputData] = useState("");
 
-	const handleInputChange = (e) => {
-		setInputData(e.target.value);
-	};
+  const handleInputChange = (e) => {
+    setInputData(e.target.value);
+  };
 
-	const handleAddTaskClick = () => {
-		if (inputData.trim() !== "") {
-		handleTaskAddition(inputData);
-		setInputData("");
-		}
-	};
+  const handleAddTaskClick = () => {
+    if (inputData.trim() !== "") {
+      handleTaskAddition(inputData);
+      setInputData("");
+    }
+  };
 
-	return (
-		<div className="add-task-container">
-			<input
-				onChange={handleInputChange}
-				value={inputData}
-				className="add-task-input"
-				type="text"
-			/>
-			
-			<div className="add-task-button-container">
-				<Button onClick={handleAddTaskClick} disabled={inputData.trim() === ""}>Adicionar</Button>
-			</div>
-		</div>
-	);
+  return (
+    <div className="add-task-container">
+      <input
+        onChange={handleInputChange}
+        value={inputData}
+        className="add-task-input"
+        type="text"
+      />
+
+      <div className="add-task-button-container">
+        <Button onClick={handleAddTaskClick} disabled={inputData.trim() === ""}>
+          Adicionar
+        </Button>
+      </div>
+    </div>
+  );
 };
 
 export default AddTask;

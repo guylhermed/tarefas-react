@@ -14,7 +14,6 @@ const App = () => {
   const [tasks, setTasks] = useState([]);
 
   useEffect(() => {
-    // Carrega as tarefas do localStorage na inicialização
     const storedTasks = JSON.parse(localStorage.getItem("tasks"));
     if (storedTasks) {
       setTasks(storedTasks);
@@ -24,7 +23,6 @@ const App = () => {
   }, []);
 
   useEffect(() => {
-    // Atualiza o localStorage sempre que as tarefas mudam
     localStorage.setItem("tasks", JSON.stringify(tasks));
   }, [tasks]);
 
