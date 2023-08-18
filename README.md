@@ -1,6 +1,6 @@
 # Tarefas
 
-Para não esquecer mais da lista à fazer, este projeto salva no localstrage cada task e seus detalhes. Permitindo adicinar novas, excluir e editar, foi desenvolvido em ReactJS e utiliza o Local Storage para armazenar as informações.
+Para não esquecer mais da lista à fazer, este projeto salva no localstrage cada task e seus detalhes. Permitindo adicinar novas, excluir e editar, foi desenvolvido em ReactJS.
 
 ## 🖼️ Preview
 
